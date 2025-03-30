@@ -72,16 +72,14 @@ permalink: /spelling_bee
     <div class="instructions">
         <div>
             <u>HOW THIS WORKS</u>:
-            <br>
-            <ol>
+            <ol style="justify-content: left;">
                 <li>I cover my eyes and face away from the screen</li>
                 <li>One of you clicks the generate button and reads out the word</li>
                 <li>I spell the word out loud (AND GET IT RIGHT MUAHAHAHASGSASG)</li>
                 <li>Repeat until I spell a word from every category</li>
             </ol>
             <br>
-            <br>
-            <u>WHAT HAPPENS IF I GET ONE WRONG</u>:
+            <u>WHAT HAPPENS IF I GET ONE WRONG</u>:<br>
             For each word taht I spell wrong, <em>I will not play League for one day</em>. So if I spell 7 words wrong, <em>I cannot play for a week</em>.
         </div>
     </div>
