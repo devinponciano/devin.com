@@ -247,11 +247,17 @@ permalink: /spelling_bee
             spellingWordDiv.innerHTML = generatedWord;
             hintSentenceDiv.innerHTML = generatedHintSentence;
         }
-        
+
 
         // defining the word generation button onclicks
-        document.getElementById("easy-word-button").onclick = generateWordWithDifficulty("easy")
-        document.getElementById("medium-word-button").onclick = generateWordWithDifficulty("medium")
-        document.getElementById("hard-word-button").onclick = generateWordWithDifficulty("hard")
+        document.getElementById("easy-word-button").onclick = function() {
+            generateWordWithDifficulty("easy");
+        }
+        document.getElementById("medium-word-button").onclick = function() {
+            generateWordWithDifficulty("medium");
+        }
+        document.getElementById("hard-word-button").onclick = function() {
+            generateWordWithDifficulty("hard");
+        }
     });
 </script>
