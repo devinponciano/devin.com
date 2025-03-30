@@ -110,7 +110,7 @@ permalink: /spelling_bee
                 <button id="easy-generate-sentence-button">Gimme Sentence</button>
                 <div id="easy-hint-sentence" class="hint-sentence"></div>
             </div>
-            <button id="easy-word-button">Gimme Word</button>
+            <button id="easy-word-button" onclick="generateWordWithDifficulty('easy')">Gimme Word</button>
         </div>
         <div class="section">
             <h2>Medium</h2>
@@ -119,7 +119,7 @@ permalink: /spelling_bee
                 <button id="medium-generate-sentence-button">Give Me Sentence</button>
                 <div id="medium-hint-sentence" class="hint-sentence"></div>
             </div>
-            <button id="medium-word-button">Give Me Word</button>
+            <button id="medium-word-button" onclick="generateWordWithDifficulty('medium')">Give Me Word</button>
         </div>
         <div class="section">
             <h2>Hard</h2>
@@ -128,7 +128,7 @@ permalink: /spelling_bee
                 <button id="hard-generate-sentence-button">Sentence Please</button>
                 <div id="hard-hint-sentence" class="hint-sentence"></div>
             </div>
-            <button id="hard-word-button">Word Please</button>
+            <button id="hard-word-button" onclick="generateWordWithDifficulty('hard')">Word Please</button>
         </div>
     </div>
 </body>
