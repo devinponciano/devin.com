@@ -10,7 +10,7 @@ permalink: /spelling_bee
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bee-ware: The Spelling Challenge</title>
+    <title>PRESENTATION SPELLING BEE</title>
     <style>
         body {
             background-color: #ffeb3b;
@@ -70,24 +70,37 @@ permalink: /spelling_bee
 <body>
     <h1>🐝 I CAN SPELL REALY WELL ACTUALLY 🐝</h1>
     <div class="instructions">
-        <p>Welcome to the ultimate spelling challenge! Click a button below to generate a word at your chosen difficulty. Think you can spell it? Think again! 🐝</p>
+        <div>
+            <u>HOW THIS WORKS</u>:
+            <br>
+            <ol>
+                <li>I cover my eyes and face away from the screen</li>
+                <li>One of you clicks the generate button and reads out the word</li>
+                <li>I spell the word out loud (AND GET IT RIGHT MUAHAHAHASGSASG)</li>
+                <li>Repeat until I spell a word from every category</li>
+            </ol>
+            <br>
+            <br>
+            <u>WHAT HAPPENS IF I GET ONE WRONG</u>:
+            For each word taht I spell wrong, <em>I will not play League for one day</em>. So if I spell 7 words wrong, <em>I cannot play for a week</em>.
+        </div>
     </div>
     <div class="sections-container">
         <div class="section">
             <h2>Easy</h2>
-            <button>Generate Word</button>
+            <button>Gimme Word</button>
         </div>
         <div class="section">
             <h2>Medium</h2>
-            <button>Generate Word</button>
+            <button>Gimme a Word</button>
         </div>
         <div class="section">
             <h2>Hard</h2>
-            <button>Generate Word</button>
+            <button>Give Me Word</button>
         </div>
         <div class="section">
             <h2>Impossible</h2>
-            <button>Generate Word</button>
+            <button>Word Please</button>
         </div>
     </div>
 </body>
