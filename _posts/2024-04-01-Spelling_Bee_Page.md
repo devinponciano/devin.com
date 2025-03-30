@@ -70,7 +70,7 @@ permalink: /spelling_bee
 <body>
     <h1>🐝 I CAN SPELL REALY WELL ACTUALLY 🐝</h1>
     <div class="instructions">
-        <div>
+        <div id="instructions-container">
             <u>HOW THIS WORKS</u>:
             <ol style="justify-content: left;">
                 <li>I cover my eyes and face away from the screen</li>
@@ -79,9 +79,9 @@ permalink: /spelling_bee
                 <li>Repeat until I spell a word from every category</li>
             </ol>
             <br>
-            <u>WHAT HAPPENS IF I GET ONE WRONG</u>:<br>
             For each word taht I spell wrong, <em>I will not play League for one day</em>. So if I spell 7 words wrong, <em>I cannot play for a week</em>.
         </div>
+        <button onclick="toggleInstructions()">Hide Instructions</button>
     </div>
     <div class="sections-container">
         <div class="section">
@@ -102,3 +102,19 @@ permalink: /spelling_bee
         </div>
     </div>
 </body>
+
+<script>
+    // page globals for tracking states
+    let instructionsShown = true
+
+    // function to toggle the instructions
+    function toggleInstructions() {
+        if (instructionsShown) {
+            document.getElementById("instructions-container").style.display = 'none';
+            instructionsShown = false
+        } else {
+            document.getElementById("instructions-container").style.display = 'block';
+            instructionsShown = true
+        }
+    }
+</script>
