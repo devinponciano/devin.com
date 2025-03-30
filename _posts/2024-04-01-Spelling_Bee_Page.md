@@ -226,6 +226,10 @@ permalink: /spelling_bee
             
             // otherwise, a word and its sentence should be generated
 
+            // let's show this button and hide the sentence real quick
+            generateSentenceButton.style.display = "inline-block";
+            hintSentenceDiv.style.display = "none";
+
             // getting the current word data for generation, removing its index
             let generatedWordData = currentWordData[wordIndexes[difficulty].pop()];
 
@@ -249,6 +253,15 @@ permalink: /spelling_bee
         }
 
 
+        function showHintSentence(difficulty) {
+            // this can only be clicked if there's already a hidden sentence
+            // that has been generated, so it just needs to be shown
+            // and the button needs to be hidden
+            document.getElementById(`${difficulty}-generate-sentence-button`).style.display = "none";
+            document.getElementById(`${difficulty}-hint-sentence`).style.display = "inline-block";
+        }
+
+
         // defining the word generation button onclicks
         document.getElementById("easy-word-button").onclick = function() {
             generateWordWithDifficulty("easy");
@@ -259,5 +272,16 @@ permalink: /spelling_bee
         document.getElementById("hard-word-button").onclick = function() {
             generateWordWithDifficulty("hard");
         }
+
+        // defining the hint sentence display toggle onclicks
+        document.getElementById("easy-generate-sentence-button").onclick = function() {
+            showHintSentence("easy")
+        };
+        document.getElementById("medium-generate-sentence-button").onclick = function() {
+            showHintSentence("medium")
+        };
+        document.getElementById("hard-generate-sentence-button").onclick = function() {
+            showHintSentence("hard")
+        };
     });
 </script>
