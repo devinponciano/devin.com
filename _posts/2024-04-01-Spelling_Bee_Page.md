@@ -220,6 +220,7 @@ permalink: /spelling_bee
 
                 // filling in the sentence with the notification
                 hintSentenceDiv.innerHTML = `The word bank ran out of ${difficulty} words... :(`;
+                hintSentenceDiv.style.display = "inline-block";
 
                 return;
             }
