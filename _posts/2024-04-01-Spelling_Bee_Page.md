@@ -7,4 +7,4 @@ type: hacks
 permalink: /spelling_bee
 ---
 
-test
+{% include spelling_bee.html %}
