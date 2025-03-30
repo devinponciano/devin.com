@@ -49,6 +49,22 @@ permalink: /spelling_bee
             text-align: center;
             box-shadow: 5px 5px 0 black;
         }
+        .word-content-container {
+            align-items: center;
+            text-align: center;
+            display: none; /* otherwise inline-block */
+        }
+        .spelling-word {
+            color: #d46a00;
+            font-family: "Times New Roman", serif;
+            font-size: 1.5em;
+        }
+        .hint-sentence {
+            color: black;
+            font-family: "Times New Roman", serif;
+            font-size: 1.3em;
+            display: none; /* otherwise inline-block */
+        }
         button {
             background-color: black;
             color: yellow;
@@ -76,9 +92,10 @@ permalink: /spelling_bee
             <u>HOW THIS WORKS</u>:
             <ol style="text-align: left;">
                 <li>I cover my eyes and face away from the screen</li>
-                <li>One of you clicks the generate button and reads out the word</li>
+                <li>One of you clicks the generate button and reads out the word that was generated from the bank of words</li>
+                <li>If I need help, I can ask for the word to be used in a sentance by pressing an additional button</li>
                 <li>I spell the word out loud (AND GET IT RIGHT MUAHAHAHASGSASG)</li>
-                <li>Repeat until I spell a word from every category</li>
+                <li>Repeat until I spell <b>3 words</b> from every difficulty</li>
             </ol>
             <br>
             For each word taht I spell wrong, <em>I will not play League for one day</em>. So if I spell 7 words wrong, <em>I cannot play for a week</em>.
@@ -88,24 +105,47 @@ permalink: /spelling_bee
     <div class="sections-container">
         <div class="section">
             <h2>Easy</h2>
-            <button>Gimme Word</button>
+            <div id="easy-word-content-container" class="word-content-container">
+                <div id="easy-spelling-word" class="spelling-word"></div>
+                <button id="easy-generate-sentence-button">Gimme Sentence</button>
+                <div id="easy-hint-sentence" class="hint-sentence"></div>
+            </div>
+            <button id="easy-word-button">Gimme Word</button>
         </div>
         <div class="section">
             <h2>Medium</h2>
-            <button>Gimme a Word</button>
+            <div id="medium-word-content-container" class="word-content-container">
+                <div id="medium-spelling-word" class="spelling-word"></div>
+                <button id="medium-generate-sentence-button">Give Me Sentence</button>
+                <div id="medium-hint-sentence" class="hint-sentence"></div>
+            </div>
+            <button id="medium-word-button">Give Me Word</button>
         </div>
         <div class="section">
             <h2>Hard</h2>
-            <button>Give Me Word</button>
-        </div>
-        <div class="section">
-            <h2>Impossible</h2>
-            <button>Word Please</button>
+            <div id="hard-word-content-container" class="word-content-container">
+                <div id="hard-spelling-word" class="spelling-word"></div>
+                <button id="hard-generate-sentence-button">Sentence Please</button>
+                <div id="hard-hint-sentence" class="hint-sentence"></div>
+            </div>
+            <button id="hard-word-button">Word Please</button>
         </div>
     </div>
 </body>
 
 <script>
+    // initializing word data
+    let WORD_DATA;
+
+    // getting the word data
+    fetch("{{site.baseurl}}/assets/json/word_data.json")
+    .then(response => response.json()) // converting the response to JSON
+    .then(data => {
+        console.log(data);
+        WORD_DATA = data;
+    })
+
+
     // page globals for tracking states
     let instructionsShown = true
 

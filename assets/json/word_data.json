@@ -1,0 +1,217 @@
+{
+    "easy":
+    [
+        {
+            "wordOptions":
+            [
+                "Devin", "Devon", "Deven"
+            ],
+            "sentenceStart": "I am a big fan of the name ",
+            "sentenceEnd": ", personally."
+        },
+        {
+            "wordOptions":
+            [
+                "Ishaan", "Ishann", "Eshaan"
+            ],
+            "sentenceStart": "I trust all people named ",
+            "sentenceEnd": "."
+        },
+        {
+            "wordOptions": [
+                "see", "sea"
+            ],
+            "sentenceStart": "I can see the sea from where I live.",
+            "sentenceEnd": null
+        },
+        {
+            "wordOptions":
+            [
+                "hear", "here"
+            ],
+            "sentenceStart": "I hear an ice cream truck driving over here!",
+            "sentenceEnd": null
+        },
+        {
+            "wordOptions":
+            [
+                "rain", "reign"
+            ],
+            "sentenceStart": "The Glorious King of Precipitation earned his title with the glory of his ",
+            "sentenceEnd": "."
+        },
+        {
+            "wordOptions":
+            [
+                "waist", "waste"
+            ],
+            "sentenceStart": "I traded all of my prized possessions for a random body part and it was a ",
+            "sentenceEnd": "."
+        },
+        {
+            "wordOptions":
+            [
+                "pear", "pair", "pare"
+            ],
+            "sentenceStart": "My friend and I pare the skin of the massive pear as a pair.",
+            "sentenceEnd": null
+        },
+        {
+            "wordOptions":
+            [
+                "there", "their", "they're"
+            ],
+            "sentenceStart": "They're over there with their parents.",
+            "sentenceEnd": null
+        }
+    ],
+    "medium":
+    [
+        {
+            "wordOptions":
+            [
+                "Pyroflective Carapace", "Pyreflective Carapace"
+            ],
+            "sentenceStart": "The ",
+            "sentenceEnd": " lets you use a fire-based counterattack if a dodge is timed correctly."
+        },
+        {
+            "wordOptions":
+            [
+                "Cendrillion", "Cendrillon"
+            ],
+            "sentenceStart": "",
+            "sentenceEnd": " is the original French name of Cinderella."
+        },
+        {
+            "wordOptions":
+            [
+                "Uumuu"
+            ],
+            "sentenceStart": "Uumuu is like a jellyfish looking thing from Hollow Knight.",
+            "sentenceEnd": null
+        },
+        {
+            "wordOptions":
+            [
+                "Tahm Kench", "Tamh Kench", "Tahm Khench"
+            ],
+            "sentenceStart": "",
+            "sentenceEnd": " has the ability \"Tongue Lash\" that slows enemy units and can even heal him."
+        },
+        {
+            "wordOptions":
+            [
+                "Illaoi", "Ilaoi", "Illoai"
+            ],
+            "sentenceStart": "",
+            "sentenceEnd": " has the ability \"Tentacle Smash\"... Mmmmmfffghhhhh..."
+        },
+        {
+            "wordOptions":
+            [
+                "Flaaffy", "Flaaaffy", "Flaafy"
+            ],
+            "sentenceStart": "Mareep evolves into ",
+            "sentenceEnd": " at level 15, which evolves into Ampharos at level 30."
+        },
+        {
+            "wordOptions":
+            [
+                "Accelgor", "Accellgor", "Axcelgor"
+            ],
+            "sentenceStart": "Shelmet's evolution is ",
+            "sentenceEnd": ", which sheds its armor during the trade with Karrablast."
+        },
+        {
+            "wordOptions":
+            [
+                "Eurydice", "Euridyce"
+            ],
+            "sentenceStart": "The tragic story of ",
+            "sentenceEnd": " is part of the larger tale of Orpheus."
+        }
+    ],
+    "hard":
+    [
+        {
+            "wordOptions":
+            [
+                "floccinaucinihilipilification", "flocsinaucinihilipilification",
+                "floccinaucinahilipilification", "floccinaucinihillipilification"
+            ],
+            "sentenceStart": "His constant ",
+            "sentenceEnd": " of even the best ideas made him unpopular in the friend group."
+        },
+        {
+            "wordOptions":
+            [
+                "pneumonoultramicroscopicsilicovolcanoconiosis",
+                "pneumonoultramicroscopicsilicovolcaniconiosis",
+                "pneumonoultramicroscopicsilicovolcanoconeosis"
+            ],
+            "sentenceStart": "The disease known as ",
+            "sentenceEnd": " was discovered by miners; I love fucking miners."
+        },
+        {
+            "wordOptions":
+            [
+                "sesquipedalian", "sesquippedalian", "sesquippedalean"
+            ],
+            "sentenceStart": "The hard difficulty of spelling bee words contains only ",
+            "sentenceEnd": " words."
+        },
+        {
+            "wordOptions":
+            [
+                "chiaroscurist"
+            ],
+            "sentenceStart": "The chiaroscurist used really dark shadows in his painting (or HER painting; we don't know).",
+            "sentenceEnd": null
+        },
+        {
+            "wordOptions":
+            [
+                "hippopotomonstrosesquipedaliophobia",
+                "hippopotomonstrosesquipedalliophobia",
+                "hippopottomonstrosesquipedaliophobia"
+            ],
+            "sentenceStart": "If you have ",
+            "sentenceEnd": ", this part must be really scary for you."
+        },
+        {
+            "wordOptions":
+            [
+                "pseudopseudohypoparathyroidism",
+                "pseudopseudopseudohypoparathyroidism",
+                "pseudopseudopseudopseudohypoparathyroidism"
+            ],
+            "sentenceStart": "The patient was diagnosed with ",
+            "sentenceEnd": ", so it difficult to tell if he actually had pseudohypoparathyroidism."
+        },
+        {
+            "wordOptions":
+            [
+                "Adam Sandler's Eight Crazy Nights"
+            ],
+            "sentenceStart": "Adam Sandler's Eight Crazy Nights is one of the greatest films of our generation.",
+            "sentenceEnd": null
+        },
+        {
+            "wordOptions":
+            [
+                "Nebuchadnezzar"
+            ],
+            "sentenceStart": "King Nebuchadnezzar of Babylon had a dream that Daniel was able to interpret.",
+            "sentenceEnd": null
+        },
+        {
+            "wordOptions":
+            [
+                "Maher-shalal-hash-baz"
+            ],
+            "sentenceStart": "The prophet Isaiah was commanded to name his son Maher-shalal-hash-baz as a symbolic message to the nation.",
+            "sentenceEnd": null
+        }
+    ]
+}
