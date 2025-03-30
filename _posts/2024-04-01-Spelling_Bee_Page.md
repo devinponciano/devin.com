@@ -53,12 +53,14 @@ permalink: /spelling_bee
             background-color: black;
             color: yellow;
             font-size: 1.2em;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
             margin-top: 10px;
             border-radius: 10px;
             box-shadow: 3px 3px 0 yellow;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
         }
         button:hover {
             background-color: yellow;
@@ -81,7 +83,7 @@ permalink: /spelling_bee
             <br>
             For each word taht I spell wrong, <em>I will not play League for one day</em>. So if I spell 7 words wrong, <em>I cannot play for a week</em>.
         </div>
-        <button onclick="toggleInstructions()">Hide Instructions</button>
+        <button id="instructions-toggler" onclick="toggleInstructions()">Hide Instructions</button>
     </div>
     <div class="sections-container">
         <div class="section">
@@ -111,10 +113,12 @@ permalink: /spelling_bee
     function toggleInstructions() {
         if (instructionsShown) {
             document.getElementById("instructions-container").style.display = 'none';
-            instructionsShown = false
+            document.getElementById("instructions-toggler").innerHTML = "Show Instructions";
+            instructionsShown = false;
         } else {
             document.getElementById("instructions-container").style.display = 'block';
-            instructionsShown = true
+            document.getElementById("instructions-toggler").innerHTML = "Hide Instructions";
+            instructionsShown = true;
         }
     }
 </script>
