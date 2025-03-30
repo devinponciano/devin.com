@@ -1,8 +1,8 @@
-title: CompSci Blogs
-description: "August 2023 to June 2024"
-owner_name: Nighthawk Coders
-github_username: nighthawkcoders
-baseurl: "/student"
+title: Devin Dot Com
+description: "A blog for silly fucking bs"
+owner_name: Devin Ponciano
+github_username: devinponciano
+baseurl: "/devin.com"
 remote_theme: pages-themes/midnight@v0.2.0
 # remote_theme: pages-themes/dinky@v0.2.0
 # remote_theme: pages-themes/minimal@v0.2.0
