@@ -72,7 +72,7 @@ permalink: /spelling_bee
     <div class="instructions">
         <div id="instructions-container">
             <u>HOW THIS WORKS</u>:
-            <ol style="justify-content: left;">
+            <ol style="text-align: left;">
                 <li>I cover my eyes and face away from the screen</li>
                 <li>One of you clicks the generate button and reads out the word</li>
                 <li>I spell the word out loud (AND GET IT RIGHT MUAHAHAHASGSASG)</li>
