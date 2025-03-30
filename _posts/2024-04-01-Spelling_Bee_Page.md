@@ -201,7 +201,7 @@ permalink: /spelling_bee
         // function to generate a word of a given difficulty
         function generateWordWithDifficulty(difficulty) {
             // displaying the element if necessary
-            document.getElementById(`${difficulty}-word-content-container`).style.display = "inline-block";
+            document.getElementById(`${difficulty}-word-content-container`).style.display = "block";
 
             let currentWordData = WORD_DATA[difficulty];
             let spellingWordDiv = document.getElementById(`${difficulty}-spelling-word`);
