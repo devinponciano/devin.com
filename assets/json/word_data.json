@@ -137,6 +137,14 @@
         {
             "wordOptions":
             [
+                "the N-word"
+            ],
+            "sentenceStart": "Spell \"the N-word\", Devin; we can't actually say the word out loud.",
+            "sentenceEnd": null
+        },
+        {
+            "wordOptions":
+            [
                 "floccinaucinihilipilification", "flocsinaucinihilipilification",
                 "floccinaucinahilipilification", "floccinaucinihillipilification"
             ],
