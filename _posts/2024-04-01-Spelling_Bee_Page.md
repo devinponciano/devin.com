@@ -45,7 +45,8 @@ permalink: /spelling_bee
             background: white;
             border: 5px solid black;
             padding: 20px;
-            width: 200px;
+            min-width: 200px;
+            width: auto;
             text-align: center;
             box-shadow: 5px 5px 0 black;
         }
