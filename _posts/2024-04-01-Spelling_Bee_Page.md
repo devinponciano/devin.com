@@ -93,7 +93,7 @@ permalink: /spelling_bee
             <ol style="text-align: left;">
                 <li>I cover my eyes and face away from the screen</li>
                 <li>One of you clicks the generate button and reads out the word that was generated from the bank of words</li>
-                <li>If I need help, I can ask for the word to be used in a sentance by pressing an additional button</li>
+                <li>If I need help, I can ask for the word to be used in a sentance by pressing another button</li>
                 <li>I spell the word out loud (AND GET IT RIGHT MUAHAHAHASGSASG)</li>
                 <li>Repeat until I spell <b>3 words</b> from every difficulty</li>
             </ol>
