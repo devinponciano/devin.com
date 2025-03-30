@@ -136,16 +136,6 @@ permalink: /spelling_bee
 <script>
     // initializing word data
     let WORD_DATA;
-
-    // getting the word data
-    fetch("{{site.baseurl}}/assets/json/word_data.json")
-    .then(response => response.json()) // converting the response to JSON
-    .then(data => {
-        console.log(data);
-        WORD_DATA = data;
-    })
-
-
     // page globals for tracking states
     let instructionsShown = true
 
@@ -166,83 +156,97 @@ permalink: /spelling_bee
     }
 
 
-    // used for pre-generating the word order
-    function randomlyGenerateIndexes(n) {
-        // generating an array with numbers from 0 to n-1
-        const indexes = Array.from({ length: n }, (_, i) => i);
-
-        // Fisher-Yates shuffle to randomize the array
-        for (let i = indexes.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1)); // getting a random index between 0 and i
-            [indexes[i], indexes[j]] = [indexes[j], indexes[i]]; // swapping elements
+    async function loadWordData() {
+        try {
+            const response = await fetch("{{site.baseurl}}/assets/json/word_data.json");
+            const data = await response.json(); // converting the response to JSON
+            console.log(data);
+            WORD_DATA = data; // store the data in WORD_DATA
+        } catch (error) {
+            console.error("Error fetching the word data:", error);
         }
-
-        return indexes;
     }
 
 
-    // little thing to generate a random index
-    function generateRandomInteger(maximum) {
-        return Math.floor(Math.random() * maximum); 
-    }
+    loadWordData().then(() => {
+        // used for pre-generating the word order
+        function randomlyGenerateIndexes(n) {
+            // generating an array with numbers from 0 to n-1
+            const indexes = Array.from({ length: n }, (_, i) => i);
 
+            // Fisher-Yates shuffle to randomize the array
+            for (let i = indexes.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1)); // getting a random index between 0 and i
+                [indexes[i], indexes[j]] = [indexes[j], indexes[i]]; // swapping elements
+            }
 
-    // storing which words have already been generated
-    let wordIndexes = {
-        "easy": randomlyGenerateIndexes(WORD_DATA["easy"].length),
-        "medium": randomlyGenerateIndexes(WORD_DATA["medium"].length),
-        "hard": randomlyGenerateIndexes(WORD_DATA["hard"].length)
-    }
-
-    // function to generate a word of a given difficulty
-    function generateWordWithDifficulty(difficulty) {
-        // displaying the element if necessary
-        document.getElementById(`${difficulty}-word-content-container`).style.display = "inline-block";
-
-        let currentWordData = WORD_DATA[difficulty];
-        let spellingWordDiv = document.getElementById(`${difficulty}-spelling-word`);
-        let generateSentenceButton = document.getElementById(`${difficulty}-generate-sentence-button`);
-        let hintSentenceDiv = document.getElementById(`${difficulty}-hint-sentence`);
-
-        // checking if all sentences have been exhausted
-        if (
-            wordIndexes[difficulty].length == 0
-        ) {
-            // removing the generation button
-            document.getElementById(`${difficulty}-word-button`).style.display = "none";
-
-            // hiding the word text and the generate sentence button
-            spellingWordDiv.style.display = "none";
-            generateSentenceButton.style.display = "none";
-
-            // filling in the sentence with the notification
-            hintSentenceDiv.innerHTML = `The word bank ran out of ${difficulty} words... :(`;
-
-            return;
-        }
-        
-        // otherwise, a word and its sentence should be generated
-
-        // getting the current word data for generation, removing its index
-        let generatedWordData = currentWordData[wordIndexes[difficulty].pop()];
-
-        // generating a random spelling of the word from the options
-        let generatedWord = generatedWordData["wordOptions"][generateRandomInteger(generatedWordData["wordOptions"].length)];
-
-        // generating the hint sentence according to the given data
-        let generatedHintSentence;
-        // if there's no end, the start sentence is just it
-        if (generatedWordData["sentenceEnd"] === null) {
-            generatedHintSentence = generatedWordData["sentenceStart"];
-        }
-        // otherwise, the generated word needs to be between the start and end
-        else {
-            generatedHintSentence = generatedWordData["sentenceStart"] + generatedWord + generatedWordData["sentenceEnd"];
+            return indexes;
         }
 
-        // adding the sentence data to the HTML
-        spellingWordDiv.innerHTML = generatedWord;
-        hintSentenceDiv.innerHTML = generatedHintSentence;
-    }
+
+        // little thing to generate a random index
+        function generateRandomInteger(maximum) {
+            return Math.floor(Math.random() * maximum); 
+        }
+
+
+        // storing which words have already been generated
+        let wordIndexes = {
+            "easy": randomlyGenerateIndexes(WORD_DATA["easy"].length),
+            "medium": randomlyGenerateIndexes(WORD_DATA["medium"].length),
+            "hard": randomlyGenerateIndexes(WORD_DATA["hard"].length)
+        }
+
+        // function to generate a word of a given difficulty
+        function generateWordWithDifficulty(difficulty) {
+            // displaying the element if necessary
+            document.getElementById(`${difficulty}-word-content-container`).style.display = "inline-block";
+
+            let currentWordData = WORD_DATA[difficulty];
+            let spellingWordDiv = document.getElementById(`${difficulty}-spelling-word`);
+            let generateSentenceButton = document.getElementById(`${difficulty}-generate-sentence-button`);
+            let hintSentenceDiv = document.getElementById(`${difficulty}-hint-sentence`);
+
+            // checking if all sentences have been exhausted
+            if (
+                wordIndexes[difficulty].length == 0
+            ) {
+                // removing the generation button
+                document.getElementById(`${difficulty}-word-button`).style.display = "none";
+
+                // hiding the word text and the generate sentence button
+                spellingWordDiv.style.display = "none";
+                generateSentenceButton.style.display = "none";
+
+                // filling in the sentence with the notification
+                hintSentenceDiv.innerHTML = `The word bank ran out of ${difficulty} words... :(`;
+
+                return;
+            }
+            
+            // otherwise, a word and its sentence should be generated
+
+            // getting the current word data for generation, removing its index
+            let generatedWordData = currentWordData[wordIndexes[difficulty].pop()];
+
+            // generating a random spelling of the word from the options
+            let generatedWord = generatedWordData["wordOptions"][generateRandomInteger(generatedWordData["wordOptions"].length)];
+
+            // generating the hint sentence according to the given data
+            let generatedHintSentence;
+            // if there's no end, the start sentence is just it
+            if (generatedWordData["sentenceEnd"] === null) {
+                generatedHintSentence = generatedWordData["sentenceStart"];
+            }
+            // otherwise, the generated word needs to be between the start and end
+            else {
+                generatedHintSentence = generatedWordData["sentenceStart"] + generatedWord + generatedWordData["sentenceEnd"];
+            }
+
+            // adding the sentence data to the HTML
+            spellingWordDiv.innerHTML = generatedWord;
+            hintSentenceDiv.innerHTML = generatedHintSentence;
+        }
+    });
 
 </script>
